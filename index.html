@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harley Davidson | United We Ride</title>
-    <meta name="description" content="Temukan kebebasan di jalan raya dengan koleksi motor Harley Davidson terbaru. Cruiser, Touring, dan Sportster.">
+    <meta name="description"
+        content="Temukan kebebasan di jalan raya dengan koleksi motor Harley Davidson terbaru. Cruiser, Touring, dan Sportster.">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-image-container">
-            <img src="hero.png" alt="Harley Davidson Hero" class="hero-image">
+            <img src="images/hero.png" alt="Harley Davidson Hero" class="hero-image">
         </div>
         <div class="hero-content">
             <h1 class="floating">HARLEY DAVIDSON</h1>
@@ -37,6 +40,7 @@
             <button class="filter-btn" data-filter="touring">TOURING</button>
             <button class="filter-btn" data-filter="sport">SPORT</button>
             <button class="filter-btn" data-filter="adventure">ADVENTURE</button>
+            <button class="filter-btn" data-filter="cvo">CVO</button>
         </div>
 
         <div class="bike-grid" id="bikeGrid">
@@ -44,15 +48,65 @@
         </div>
     </main>
 
+    <!-- History Section -->
+    <section class="history-section container">
+        <div class="section-title">
+            <h2 class="gradient-text">THE HARLEY-DAVIDSON LEGACY</h2>
+            <p>Lebih dari satu abad kebebasan dan petualangan</p>
+        </div>
+        <div class="history-content"
+            style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 5rem; padding: 3rem; background: var(--surface-color); border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem; text-align: justify;">
+                Didirikan pada tahun 1903 di Milwaukee, Wisconsin, Harley-Davidson bukan sekadar merek sepeda motor; ini
+                adalah ikon budaya Amerika dan simbol kebebasan di jalan raya. Berawal dari William S. Harley dan Arthur
+                Davidson yang merakit motor pertama mereka di sebuah gudang kayu kecil, semangat inovasi ini terus
+                berkobar hingga menciptakan mesin V-Twin legendaris yang suaranya sangat khas dan diakui di seluruh
+                dunia.
+            </p>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem; text-align: justify;">
+                Selama lebih dari 120 tahun, Harley-Davidson telah bertahan melewati dua Perang Dunia, Depresi Besar,
+                dan berbagai tantangan zaman. Dedikasi terhadap desain premium, performa tangguh, dan rasa persaudaraan
+                dalam komunitas (H.O.G) membuat motor ini lebih dari sekadar kendaraan, melainkan sebuah gaya hidup.
+                Dari model kustom klasik hingga lini motor adventure dan sport modern saat ini, setiap Harley-Davidson
+                diciptakan dengan satu tujuan: <strong>Memberikan pengalaman berkendara yang murni dan tak
+                    terlupakan.</strong>
+            </p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer style="padding: 4rem 0; background: #000; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
         <div class="container">
             <h3 style="color: var(--accent-color); margin-bottom: 1rem;">HARLEY-DAVIDSON INDONESIA</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">© 2026 H-D or its affiliates. HARLEY-DAVIDSON, HARLEY, H-D, and the Bar and Shield Logo are among the trademarks of H-D U.S.A., LLC.</p>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">© 2026 H-D or its affiliates. HARLEY-DAVIDSON,
+                HARLEY, H-D, and the Bar and Shield Logo are among the trademarks of H-D U.S.A., LLC.</p>
             <button class="filter-btn" style="background: var(--accent-color); color: white;">FIND A DEALER</button>
         </div>
     </footer>
 
+    <!-- Bike Detail Modal -->
+    <div id="bikeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span id="modalTag" class="bike-tag"></span>
+                    <h2 id="modalName"></h2>
+                    <p id="modalDesc" class="modal-desc"></p>
+                    <div class="bike-stats modal-stats">
+                        <div class="stat">MESIN<span id="modalEngine"></span></div>
+                        <div class="stat">TORSI<span id="modalTorque"></span></div>
+                        <div class="stat">BERAT<span id="modalWeight"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
